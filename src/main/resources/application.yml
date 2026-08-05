@@ -1,1 +1,24 @@
-spring.application.name=clashcardtrader
+spring:
+  application:
+    name: clash-card-trader
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clash_card_trader
+    username: postgres
+    password: postgres
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
