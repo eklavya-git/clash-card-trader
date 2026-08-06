@@ -31,7 +31,7 @@ public class Player extends BaseEntity{
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "clan_Id")
+    @JoinColumn(name = "clan_id")
     private Clan clan;
 
     @Column(name = "last_login_at")
@@ -40,4 +40,12 @@ public class Player extends BaseEntity{
     @Convert(converter = ClashTagConverter.class)
     @Column(nullable = false, unique = true, length = 12)
     private ClashTag tag;
+
+    public static Player register(ClashTag tag, String name) {
+        Player player = new Player();
+        player.setTag(tag);
+        player.setName(name);
+
+        return player;
+    }
 }

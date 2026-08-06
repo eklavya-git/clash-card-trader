@@ -213,6 +213,20 @@ Some notable decisions include:
 
 ---
 
+## Useful PostgreSQL Commands
+
+docker compose up -d
+
+docker compose down
+
+docker exec -it clash-card-postgres psql -U postgres -d clash_card_trader
+
+\dt
+
+SELECT * FROM players;
+
+SELECT * FROM cards;
+
 # License
 
 This project is intended for learning and experimentation and is not affiliated with or endorsed by Supercell.
