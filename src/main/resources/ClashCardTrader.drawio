@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="1Ai9pKz1czieGksN2P9o">
+    <mxGraphModel dx="494" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Login" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Register" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Hey there!" vertex="1">
+          <mxGeometry height="30" width="90" x="310" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Welcome to Clash Cards Trader !" vertex="1">
+          <mxGeometry height="30" width="250" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Update my current clan" vertex="1">
+          <mxGeometry height="60" width="96" x="270" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Publish my tradeable cards" vertex="1">
+          <mxGeometry height="60" width="96" x="466" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Dashboard" vertex="1">
+          <mxGeometry height="30" width="170" x="380" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Wizard&amp;nbsp; &amp;nbsp;-&amp;nbsp; &amp;nbsp; 2" vertex="1">
+          <mxGeometry height="30" width="120" x="270" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Witch&amp;nbsp; &amp;nbsp; -&amp;nbsp; &amp;nbsp; 5" vertex="1">
+          <mxGeometry height="30" width="120" x="270" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Archer&amp;nbsp; &amp;nbsp;-&amp;nbsp; &amp;nbsp; 2" vertex="1">
+          <mxGeometry height="30" width="120" x="270" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Dragon&amp;nbsp; &amp;nbsp;-&amp;nbsp; &amp;nbsp; 2" vertex="1">
+          <mxGeometry height="30" width="120" x="270" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="|" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="|" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="UQwwUSMpUbEsGRvwo3iX-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="|" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="630" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
