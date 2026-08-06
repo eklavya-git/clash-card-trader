@@ -12,7 +12,7 @@ import jakarta.persistence.UniqueConstraint;
 
 @Entity
 @Table(
-    name = "players_tradeable_cards",
+    name = "player_tradeable_cards",
     uniqueConstraints = {
         @UniqueConstraint(
             name = "uk_player_card",
