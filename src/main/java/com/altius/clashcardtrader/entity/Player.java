@@ -45,7 +45,6 @@ public class Player extends BaseEntity{
         Player player = new Player();
         player.setTag(tag);
         player.setName(name);
-
         return player;
     }
 }
