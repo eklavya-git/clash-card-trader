@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.altius.clashcardtrader.constants.SecurityEndpoints;
+
 @Configuration
 public class SecurityConfiguration {
 
@@ -16,13 +18,10 @@ public class SecurityConfiguration {
                 .formLogin(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/v1/api/cards", 
-                        "/actuator/health", 
-                        "/v1/api/auth/register",
-                        "/v1/api/clans",
-                        "/v1/api/players"
-                    ).permitAll()
-                        .anyRequest().authenticated());
+                        .requestMatchers(SecurityEndpoints.PUBLIC)
+                        .permitAll()
+                        .anyRequest()
+                        .authenticated());
         return http.build();
 
     }
