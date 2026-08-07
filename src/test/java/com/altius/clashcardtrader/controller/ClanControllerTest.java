@@ -18,6 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.altius.clashcardtrader.advice.GlobalExceptionHandler;
 import com.altius.clashcardtrader.config.SecurityConfiguration;
 import com.altius.clashcardtrader.dto.response.ClanResponse;
+import com.altius.clashcardtrader.exception.ClanNotFoundException;
 import com.altius.clashcardtrader.service.ClanService;
 
 @WebMvcTest(ClanController.class)
@@ -57,5 +58,26 @@ class ClanControllerTest {
 
             verify(clanService).getClan("ABC123");
         }
+
+        @Test
+        @DisplayName("Should return 404 when clan does not exist")
+        void shouldReturn404WhenClanDoesNotExist() throws Exception {
+            String clanTag = "ABC123";
+            String message = "Clan with tag '#ABC123' was not found.";
+
+            when(clanService.getClan(clanTag))
+                    .thenThrow(new ClanNotFoundException(message));
+
+            mockMvc.perform(get("/v1/api/clans/{tag}", clanTag))
+                    .andExpect(status().isNotFound())
+                    .andExpect(jsonPath("$.status").value(404))
+                    .andExpect(jsonPath("$.errorCode").value("CLAN_NOT_FOUND"))
+                    .andExpect(jsonPath("$.message").value(message))
+                    .andExpect(jsonPath("$.path")
+                            .value("/v1/api/clans/ABC123"));
+
+            verify(clanService).getClan(clanTag);
+        }
+
     }
 }
