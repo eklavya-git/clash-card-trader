@@ -227,6 +227,10 @@ SELECT * FROM players;
 
 SELECT * FROM cards;
 
+\q
+
+select b.name, a.quantity from player_tradeable_cards a inner join cards b on a.card_id = b.id;
+
 ## Clash Tags
 
 All API endpoints that accept a Clash tag as a path parameter expect the tag **without the leading `#`**.
