@@ -1,7 +1,6 @@
 package com.altius.clashcardtrader.service;
 
 import java.util.UUID;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,35 +21,40 @@ import lombok.RequiredArgsConstructor;
 @Transactional
 public class PlayerService {
 
-    private final PlayerRepository playerRepository;
-    private final ClanRepository clanRepository;
-    private final PlayerMapper playerMapper;
+        private final PlayerRepository playerRepository;
+        private final ClanRepository clanRepository;
+        private final PlayerMapper playerMapper;
 
-    @Transactional
-    public UpdateClanResponse updateClan(
-            UUID playerId,
-            UpdateClanRequest request) {
+        @Transactional
+        public UpdateClanResponse updateClan(
+                        UUID playerId,
+                        UpdateClanRequest request) {
 
-        // Find the player first to associate the clan name with
-        Player player = playerRepository.findById(playerId)
-                .orElseThrow(() -> new PlayerNotFoundException(playerId.toString()));
+                // Find the player first to associate the clan name with
+                Player player = findPlayer(playerId);
 
-        ClashTag clanTag = ClashTag.of(request.clanTag());
+                ClashTag clanTag = ClashTag.of(request.clanTag());
 
-        // Attempt to find the clan that the player wants to associate themself with. 
-        // If not found, then create one and map the player to it 
-        Clan clan = clanRepository.findByTag(clanTag)
-                .orElseGet(() -> {
-                    Clan newClan = Clan.create(
-                            clanTag,
-                            request.clanName());
+                // Attempt to find the clan that the player wants to associate themself with.
+                // If not found, then create one and map the player to it
+                Clan clan = clanRepository.findByTag(clanTag)
+                                .orElseGet(() -> {
+                                        Clan newClan = Clan.create(
+                                                        clanTag,
+                                                        request.clanName());
 
-                    return clanRepository.save(newClan);
-                });
+                                        return clanRepository.save(newClan);
+                                });
 
-        player.setClan(clan);
-        Player updatedPlayer = playerRepository.save(player);
+                player.setClan(clan);
+                Player updatedPlayer = playerRepository.save(player);
 
-        return playerMapper.toUpdateClanResponse(updatedPlayer);
-    }
+                return playerMapper.toUpdateClanResponse(updatedPlayer);
+        }
+
+        private Player findPlayer(UUID playerId) {
+                return playerRepository.findById(playerId)
+                                .orElseThrow(() -> new PlayerNotFoundException(
+                                                "Player with id '" + playerId + "' was not found."));
+        }
 }

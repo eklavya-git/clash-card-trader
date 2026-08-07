@@ -28,6 +28,8 @@ import com.altius.clashcardtrader.dto.response.UpdateClanResponse;
 import com.altius.clashcardtrader.exception.InvalidClashTagException;
 import com.altius.clashcardtrader.exception.PlayerNotFoundException;
 import com.altius.clashcardtrader.service.PlayerService;
+import com.altius.clashcardtrader.service.TradeableCardService;
+
 import tools.jackson.databind.ObjectMapper;
 
 @WebMvcTest(PlayerController.class)
@@ -45,6 +47,9 @@ class PlayerControllerTest {
 
     @MockitoBean
     private PlayerService playerService;
+
+    @MockitoBean
+    TradeableCardService tradeableCardService;
 
     @Nested
     @DisplayName("PUT /v1/api/players/{playerId}/clan")

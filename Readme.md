@@ -215,9 +215,9 @@ Some notable decisions include:
 
 ## Useful PostgreSQL Commands
 
-docker compose up -d
-
 docker compose down
+
+docker compose up -d
 
 docker exec -it clash-card-postgres psql -U postgres -d clash_card_trader
 
@@ -226,6 +226,10 @@ docker exec -it clash-card-postgres psql -U postgres -d clash_card_trader
 SELECT * FROM players;
 
 SELECT * FROM cards;
+
+\q
+
+select b.name, a.quantity from player_tradeable_cards a inner join cards b on a.card_id = b.id;
 
 ## Clash Tags
 
