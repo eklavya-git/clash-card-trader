@@ -215,9 +215,9 @@ Some notable decisions include:
 
 ## Useful PostgreSQL Commands
 
-docker compose up -d
-
 docker compose down
+
+docker compose up -d
 
 docker exec -it clash-card-postgres psql -U postgres -d clash_card_trader
 
