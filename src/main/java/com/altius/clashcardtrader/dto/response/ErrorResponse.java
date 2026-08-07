@@ -1,8 +1,15 @@
 package com.altius.clashcardtrader.dto.response;
 
+import java.time.Instant;
+
+import lombok.Builder;
+
+@Builder
 public record ErrorResponse(
-    String errorCode,
-    String message
-) {
-    
+        Instant timestamp,
+        int status,
+        String path,
+        String errorCode,
+        String message) {
+
 }

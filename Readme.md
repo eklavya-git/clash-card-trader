@@ -227,6 +227,18 @@ SELECT * FROM players;
 
 SELECT * FROM cards;
 
+## Clash Tags
+
+All API endpoints that accept a Clash tag as a path parameter expect the tag **without the leading `#`**.
+
+Example:
+
+GET /v1/api/clans/ABC123
+
+Request bodies may contain tags with or without the leading `#`. The server normalizes all tags internally.
+
+Responses always return the canonical representation including the leading `#`.
+
 # License
 
 This project is intended for learning and experimentation and is not affiliated with or endorsed by Supercell.
